@@ -1,15 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.*?>
-<?import javafx.scene.text.*?>
-<?import java.lang.*?>
 <?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 
-<Pane
-        fx:controller="com.example.demo1.eventos.EventosPagarRenta"
-        prefHeight="357.0" prefWidth="600.0"
-        xmlns="http://javafx.com/javafx/8"
-        xmlns:fx="http://javafx.com/fxml/1">
+<Pane prefHeight="357.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo1.eventos.EventosPagarRenta">
    <children>
       <Label layoutX="24.0" layoutY="24.0" text="Pagar Renta">
          <font>
@@ -20,22 +15,22 @@
       <RadioButton fx:id="radioButton500" layoutX="24.0" layoutY="169.0" mnemonicParsing="false" text="500" />
       <RadioButton fx:id="radioButton100" layoutX="24.0" layoutY="228.0" mnemonicParsing="false" text="100" />
       <RadioButton fx:id="radioButton200" layoutX="24.0" layoutY="198.0" mnemonicParsing="false" text="200" />
-      <Button fx:id="botonRestar1000" layoutX="170.0" layoutY="135.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="36.0" text="-" />
-      <Button fx:id="botonAniadir1000" layoutX="91.0" layoutY="135.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="36.0" text="+" />
+      <Button fx:id="botonRestar1000" layoutX="170.0" layoutY="135.0" mnemonicParsing="false" onAction="#onClickRestar1000" prefHeight="25.0" prefWidth="36.0" text="-" />
+      <Button fx:id="botonAniadir1000" layoutX="91.0" layoutY="135.0" mnemonicParsing="false" onAction="#onClickAniadir1000" prefHeight="25.0" prefWidth="36.0" text="+" />
       <Label fx:id="txtLabelNum1000" layoutX="145.0" layoutY="139.0" text="0" />
       <Label fx:id="txtLabelNum500" layoutX="145.0" layoutY="169.0" text="0" />
-      <Button fx:id="botonAniadir500" layoutX="91.0" layoutY="165.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="36.0" text="+" />
-      <Button fx:id="botonRestar500" layoutX="170.0" layoutY="165.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="36.0" text="-" />
+      <Button fx:id="botonAniadir500" layoutX="91.0" layoutY="165.0" mnemonicParsing="false" onAction="#onClickAniadir500" prefHeight="25.0" prefWidth="36.0" text="+" />
+      <Button fx:id="botonRestar500" layoutX="170.0" layoutY="165.0" mnemonicParsing="false" onAction="#onClickRestar500" prefHeight="25.0" prefWidth="36.0" text="-" />
       <Label fx:id="txtLabelNum200" layoutX="145.0" layoutY="198.0" text="0" />
-      <Button fx:id="botonAniadir200" layoutX="91.0" layoutY="194.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="36.0" text="+" />
-      <Button fx:id="botonRestar200" layoutX="170.0" layoutY="194.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="36.0" text="-" />
+      <Button fx:id="botonAniadir200" layoutX="91.0" layoutY="194.0" mnemonicParsing="false" onAction="#onClickAniadir200" prefHeight="25.0" prefWidth="36.0" text="+" />
+      <Button fx:id="botonRestar200" layoutX="170.0" layoutY="194.0" mnemonicParsing="false" onAction="#onClickRestar200" prefHeight="25.0" prefWidth="36.0" text="-" />
       <Label fx:id="txtLabelNum100" layoutX="145.0" layoutY="228.0" text="0" />
-      <Button fx:id="botonAniadir100" layoutX="91.0" layoutY="224.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="36.0" text="+" />
-      <Button fx:id="botonRestar100" layoutX="170.0" layoutY="224.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="36.0" text="-" />
+      <Button fx:id="botonAniadir100" layoutX="91.0" layoutY="224.0" mnemonicParsing="false" onAction="#onClickAniadir100" prefHeight="25.0" prefWidth="36.0" text="+" />
+      <Button fx:id="botonRestar100" layoutX="170.0" layoutY="224.0" mnemonicParsing="false" onAction="#onClickRestar100" prefHeight="25.0" prefWidth="36.0" text="-" />
       <Label layoutX="24.0" layoutY="273.0" text="Valor Ingresado" />
       <Label layoutX="24.0" layoutY="297.0" text="Valor a Pagar" />
       <Label fx:id="txtLabelValorPagar" layoutX="127.0" layoutY="297.0" text="0" />
       <Label fx:id="txtLabelValorIngresado" layoutX="127.0" layoutY="273.0" text="0" />
-      <Button fx:id="botonPago" layoutX="224.0" layoutY="293.0" mnemonicParsing="false" text="Pagar" />
+      <Button fx:id="botonPago" layoutX="224.0" layoutY="293.0" mnemonicParsing="false" onAction="#onClickPagar" text="Pagar" />
    </children>
 </Pane>

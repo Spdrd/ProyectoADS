@@ -1,15 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<Pane fx:controller="com.example.demo1.eventos.EventosListarServiciosAgregados"
-      prefHeight="404.0"
-      prefWidth="525.0"
-      xmlns="http://javafx.com/javafx/8"
-      xmlns:fx="http://javafx.com/fxml/1">
+<Pane prefHeight="404.0" prefWidth="525.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo1.eventos.EventosListarServiciosAgregados">
    <children>
       <Label layoutX="24.0" layoutY="24.0" text="Renta Actual">
          <font>
@@ -22,11 +17,11 @@
       <Label fx:id="txtLabelCostoTotal" layoutX="107.0" layoutY="357.0" text="0" />
       <ComboBox fx:id="comboBoxServicioSeleccionado" layoutX="238.0" layoutY="142.0" prefHeight="25.0" prefWidth="160.0" promptText="Servicio a Modificar" />
       <Label fx:id="txtLabelNumPasajeros" layoutX="433.0" layoutY="187.0" text="0" />
-      <Button fx:id="botonAniadirPasajero" layoutX="379.0" layoutY="183.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="36.0" text="+" />
-      <Button fx:id="botonRestarPasajero" layoutX="458.0" layoutY="183.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="36.0" text="-" />
+      <Button fx:id="botonAniadirPasajero" layoutX="379.0" layoutY="183.0" mnemonicParsing="false" onAction="#onClickAgregarP" prefHeight="25.0" prefWidth="36.0" text="+" />
+      <Button fx:id="botonRestarPasajero" layoutX="458.0" layoutY="183.0" mnemonicParsing="false" onAction="#onClickRestarP" prefHeight="25.0" prefWidth="36.0" text="-" />
       <Button layoutX="238.0" layoutY="183.0" mnemonicParsing="false" text="Modificar Pajaseros" />
-      <Button fx:id="botonEliminar" layoutX="238.0" layoutY="231.0" mnemonicParsing="false" text="Eliminar" textFill="RED" />
-      <Button fx:id="botonPagarRenta" layoutX="233.0" layoutY="322.0" mnemonicParsing="false" text="Pagar Renta" />
-      <Button fx:id="botonAgregarServicio" layoutX="24.0" layoutY="322.0" mnemonicParsing="false" text="Agregar Servicio" />
+      <Button fx:id="botonEliminar" layoutX="238.0" layoutY="231.0" mnemonicParsing="false" onAction="#onClickEliminar" text="Eliminar" textFill="RED" />
+      <Button fx:id="botonPagarRenta" layoutX="233.0" layoutY="322.0" mnemonicParsing="false" onAction="#onClickPagar" text="Pagar Renta" />
+      <Button fx:id="botonAgregarServicio" layoutX="24.0" layoutY="322.0" mnemonicParsing="false" onAction="#onClickAgregarServicio" text="Agregar Servicio" />
    </children>
 </Pane>

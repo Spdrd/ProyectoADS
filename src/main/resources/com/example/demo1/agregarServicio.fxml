@@ -1,15 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<Pane
-        fx:controller="com.example.demo1.eventos.EventosAgregarServicio"
-        prefHeight="310.0" prefWidth="600.0"
-        xmlns="http://javafx.com/javafx/8"
-        xmlns:fx="http://javafx.com/fxml/1">
+<Pane prefHeight="310.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo1.eventos.EventosAgregarServicio">
    <children>
       <Label layoutX="24.0" layoutY="24.0" text="Agregar Servicio">
          <font>
@@ -17,10 +12,10 @@
          </font>
       </Label>
       <ComboBox id="comboBoxServicioContratar" fx:id="comboBoxServicio" layoutX="24.0" layoutY="149.0" prefWidth="150.0" promptText="Servicio a Contratar" />
-      <Button id="botonRentar" fx:id="botonContratar" layoutX="23.0" layoutY="220.0" mnemonicParsing="false" text="Contratar" />
-      <Button fx:id="botonRestarPasajero" layoutX="174.0" layoutY="182.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="36.0" text="-" />
+      <Button id="botonRentar" fx:id="botonContratar" layoutX="23.0" layoutY="220.0" mnemonicParsing="false" onAction="#onClickContratar" text="Contratar" />
+      <Button fx:id="botonRestarPasajero" layoutX="174.0" layoutY="182.0" mnemonicParsing="false" onAction="#onCLickRestar" prefHeight="25.0" prefWidth="36.0" text="-" />
       <Label layoutX="24.0" layoutY="186.0" text="Pasajeros" />
-      <Button fx:id="botonAniadirPasajero" layoutX="95.0" layoutY="182.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="36.0" text="+" />
+      <Button fx:id="botonAniadirPasajero" layoutX="95.0" layoutY="182.0" mnemonicParsing="false" onAction="#onClickAgregar" prefHeight="25.0" prefWidth="36.0" text="+" />
       <Label fx:id="txtLabelNumPasajeros" layoutX="149.0" layoutY="186.0" text="0" />
    </children>
 </Pane>

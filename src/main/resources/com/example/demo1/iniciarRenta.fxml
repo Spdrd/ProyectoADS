@@ -1,23 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.text.*?>
 <?import javafx.scene.control.*?>
-<?import java.lang.*?>
 <?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 
-
-<Pane
-        fx:controller="com.example.demo1.eventos.EventosIniciarRenta"
-        prefHeight="277.0" prefWidth="600.0"
-        xmlns="http://javafx.com/javafx/8"
-        xmlns:fx="http://javafx.com/fxml/1">
+<Pane prefHeight="277.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo1.eventos.EventosIniciarRenta">
    <children>
       <Label layoutX="24.0" layoutY="24.0" text="Iniciar Renta">
          <font>
             <Font size="75.0" />
          </font>
       </Label>
-      <ComboBox id="comboBoxCarroRentar" layoutX="24.0" layoutY="149.0" prefWidth="150.0" promptText="Carro a rentar" />
-      <Button id="botonRentar" layoutX="24.0" layoutY="180.0" mnemonicParsing="false" text="Rentar" />
+      <ComboBox id="comboBoxCarroRentar" fx:id="comboBoxCarro" layoutX="24.0" layoutY="149.0" prefWidth="150.0" promptText="Carro a rentar" />
+      <Button id="botonRentar" layoutX="24.0" layoutY="180.0" mnemonicParsing="false" onAction="#onClickRentar" text="Rentar" />
    </children>
 </Pane>
