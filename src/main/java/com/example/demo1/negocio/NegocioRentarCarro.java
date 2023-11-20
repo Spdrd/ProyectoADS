@@ -5,37 +5,36 @@ import com.example.demo1.integracion.*;
 
 import java.util.List;
 public class NegocioRentarCarro implements INegocioRentarCarro{
-
-    private IIntegracionJson integra = (IIntegracionJson) new IntegracionJson();
-
+    private IIntegracionJson integrador = (IIntegracionJson) new IntegracionJson();
+    private List<Carro> carros;
     public Renta iniciarRenta(){
-        return integra.iniciarRenta();
+        return integrador.iniciarRenta();
     }
     public Servicio agregarServicio(){
-        return integra.agregarServicio();
+        return integrador.agregarServicio();
     }
     public List<Servicio> listarServiciosAgregados(){
-        return integra.listarServiciosAgregados();
+        return integrador.listarServiciosAgregados();
     }
     public Cliente login(){
-        return integra.login();
+        return integrador.login();
     }
     public Renta pagarRenta(){
-        return integra.pagarRenta();
+        return integrador.pagarRenta();
     }
 
     @Override
     public Renta crearRenta() {
-        return integra.crearRenta();
+        return integrador.crearRenta();
     }
 
     @Override
     public List<Carro> obtenerCarro() {
-        return integra.obtenerCarro();
+        return integrador.obtenerCarro();
     }
 
     @Override
     public List<Pago> obtenerPagos() {
-        return integra.obtenerPagos();
+        return integrador.obtenerPagos();
     }
 }
