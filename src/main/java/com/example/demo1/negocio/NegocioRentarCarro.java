@@ -16,8 +16,9 @@ public class NegocioRentarCarro implements INegocioRentarCarro{
     public List<Servicio> listarServiciosAgregados(){
         return integrador.listarServiciosAgregados();
     }
+    @Override
     public Cliente login(){
-        return integrador.login();
+        return null;
     }
     public Renta pagarRenta(){
         return integrador.pagarRenta();
@@ -29,12 +30,12 @@ public class NegocioRentarCarro implements INegocioRentarCarro{
     }
 
     @Override
-    public List<Carro> obtenerCarro() {
-        return integrador.obtenerCarro();
+    public List<Carro> cargarCarros() {
+        return integrador.cargarCarros();
     }
 
     @Override
-    public List<Pago> obtenerPagos() {
-        return integrador.obtenerPagos();
+    public List<Pago> cargarPagos() {
+        return integrador.cargarPagos();
     }
 }
