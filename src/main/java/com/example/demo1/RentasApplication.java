@@ -1,7 +1,6 @@
 package com.example.demo1;
 
-import com.example.demo1.eventos.EventosIniciarRenta;
-import com.example.demo1.eventos.EventosLogin;
+import com.example.demo1.eventos.*;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
@@ -42,7 +41,7 @@ public class RentasApplication extends Application {
         try {
             FXMLLoader fxmlLoader = new FXMLLoader(RentasApplication.class.getResource("agregarServicio.fxml"));
             Pane pane = fxmlLoader.load();
-            EventosIniciarRenta eventos = fxmlLoader.getController();
+            EventosAgregarServicio eventos = fxmlLoader.getController();
             eventos.setAplicacion(this);
             Scene scene = new Scene(pane);
             primaryStage.setScene(scene);
@@ -56,7 +55,7 @@ public class RentasApplication extends Application {
         try {
             FXMLLoader fxmlLoader = new FXMLLoader(RentasApplication.class.getResource("listarServiciosAgregados.fxml"));
             Pane pane = fxmlLoader.load();
-            EventosIniciarRenta eventos = fxmlLoader.getController();
+            EventosListarServiciosAgregados eventos = fxmlLoader.getController();
             eventos.setAplicacion(this);
             Scene scene = new Scene(pane);
             primaryStage.setScene(scene);
@@ -66,11 +65,11 @@ public class RentasApplication extends Application {
 
         }
     }
-    public void abrirpagarRenta(){
+    public void abrirPagarRenta(){
         try {
             FXMLLoader fxmlLoader = new FXMLLoader(RentasApplication.class.getResource("pagarRenta.fxml"));
             Pane pane = fxmlLoader.load();
-            EventosIniciarRenta eventos = fxmlLoader.getController();
+            EventosPagarRenta eventos = fxmlLoader.getController();
             eventos.setAplicacion(this);
             Scene scene = new Scene(pane);
             primaryStage.setScene(scene);
@@ -81,9 +80,11 @@ public class RentasApplication extends Application {
         }
     }
     public void abrirLogin(){
-        try{
-            FXMLLoader fxmlLoader = new FXMLLoader(RentasApplication.class.getResource(("login.fxml")));
+        try {
+            FXMLLoader fxmlLoader = new FXMLLoader(RentasApplication.class.getResource("login.fxml"));
             Pane pane = fxmlLoader.load();
+            EventosLogin eventos = fxmlLoader.getController();
+            eventos.setAplicacion(this);
             Scene scene = new Scene(pane);
             primaryStage.setScene(scene);
             primaryStage.show();

@@ -9,10 +9,7 @@ public class EventosIniciarRenta {
     RentasApplication aplicacion;
     INegocioRentarCarro negocio = (INegocioRentarCarro) new NegocioRentarCarro();
     public void onClickRentar(ActionEvent actionEvent) {
-    }
-
-    public void closeWindows() {
-
+        aplicacion.abrirListarServiciosAgregados();
     }
     public void setAplicacion(RentasApplication aplicacion){
         this.aplicacion = aplicacion;

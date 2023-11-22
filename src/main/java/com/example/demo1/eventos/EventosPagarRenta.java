@@ -1,8 +1,16 @@
 package com.example.demo1.eventos;
 
+import com.example.demo1.RentasApplication;
+import com.example.demo1.negocio.INegocioRentarCarro;
+import com.example.demo1.negocio.NegocioRentarCarro;
 import javafx.event.ActionEvent;
 
 public class EventosPagarRenta {
+    INegocioRentarCarro negocio = (INegocioRentarCarro) new NegocioRentarCarro();
+    RentasApplication aplicacion;
+    public void setAplicacion(RentasApplication aplicacion){
+        this.aplicacion = aplicacion;
+    }
     public void onClickRestar1000(ActionEvent actionEvent) {
     }
 
@@ -28,5 +36,6 @@ public class EventosPagarRenta {
     }
 
     public void onClickPagar(ActionEvent actionEvent) {
+        aplicacion.abrirIniciarRenta();
     }
 }
